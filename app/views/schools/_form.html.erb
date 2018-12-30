@@ -1,0 +1,19 @@
+<%= form_for @school do |f| %>
+  
+  <% if @school.errors.any? %>
+    <p><%= @school.errors.full_messages.join(", ") %></p>
+  <% end %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>  
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  </div>  
+  
+  <%= f.submit "SAVE" %>
+  
+<% end %>

@@ -1,0 +1,23 @@
+Hello
+
+<%= form_tag "/schools", method: "GET" do %>
+  <div>
+    <%= text_field_tag "path[service_id]" %>
+    <br><%= text_field_tag "path[url]" %>
+    <br><%= text_field_tag "path[method]" %>
+    <br><%= text_field_tag "path[action_name]" %>
+    <br><%= text_field_tag "path[controller_name]" %>
+    <br><%= text_area_tag "path[area]", '', rows: "2", cols: "40" %>
+    <br><%= number_field_tag "path[number]" %>
+    <br><%= number_field_tag "path[number]", nil, step: 0.5 %>
+    <br><%= select_tag "path[drop]", options_for_select([["one", 1], ["two", 2]]) %>
+    <br><%= radio_button_tag "path[gender]", "male" %>Male
+    <br>
+    <%= radio_button_tag "path[gender]", "female" %>Female
+    <br>
+    <%= check_box_tag "path[check]", true %> Accept terms
+    <br>
+    <%= hidden_field_tag "path[hide]", '', value: "karthik" %>
+  </div>
+  <%= submit_tag "SAVE" %>
+<% end%>
